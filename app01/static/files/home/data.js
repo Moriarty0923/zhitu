@@ -86,7 +86,7 @@
             hf = -36.00000000000003, hg = "dot-1", hh = "椭圆", hi = 317, hj = 330, hk = 10, hl = 0xFFCCCCCC,
             hm = "设置 选中状态 当前元件 equal to &quot;true&quot;", hn = "当前元件 to \"true\"", ho = "选中状态 当前元件 equal to \"true\"",
             hp = "Set 轮播 为&nbsp; to 1 向左滑动 500ms ", hq = "轮播 to 1", hr = "Set 轮播 为  to 1 向左滑动 500ms ",
-            hs = "images/home/dot-1_u13.svg", ht = "selected~", hu = "images/home/dot-1_u13_selected.svg", hv = "圆点-2",
+            hs = "images/home/dot1.svg", ht = "selected~", hu = "images/home/dot1_selected.svg", hv = "圆点-2",
             hw = 337, hx = "Set 轮播 为&nbsp; to 2 向左滑动 500ms ", hy = "轮播 to 2", hz = "Set 轮播 为  to 2 向左滑动 500ms ",
             hA = "圆点-3", hB = 357, hC = "Set 轮播 为&nbsp; to 3 向左滑动 500ms ", hD = "轮播 to 3",
             hE = "Set 轮播 为  to 3 向左滑动 500ms ", hF = "圆点-4", hG = 377, hH = "Set 轮播 为&nbsp; to 4 向左滑动 500ms ",

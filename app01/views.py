@@ -21,7 +21,7 @@ def user_login(request):
         if len(models.User.objects.filter(username=uid, password=pwd)) != 0:
             # 登录成功
 
-            return HttpResponse("登录成功")
+            return redirect('/all/logged', {'username': uid})
         else:
             return HttpResponse("登录失败")
 
@@ -33,7 +33,7 @@ def user_register(request):
         username = request.POST.get("username")
         pwd = request.POST.get("password")
         models.User.objects.create(username=username, password=pwd)
-        return redirect("/user/register")
+        return redirect('/all/logged', {'username': username})
 
 
 def admin_home(request):
@@ -48,42 +48,7 @@ def user_delete(request):
     return redirect("/admin/home/")
 
 
-def home(request):
-    return render(request, 'home.html')
-    if request.method == 'GET':
-        response = {}
 
-        # top 10（公告）的处理，筛选10个也要改
-        announcements = models.Announcement.objects.filter()
-        # 把这10个公告封装成字典
-        a_list = []
-        for a in announcements:
-            dic = {'a_id': a.id, 'a_title': a.a_title}
-            a_list.append(dic)
-        # 把列表装进回复字典里
-        n = 10 if len(a_list) < 10 else len(a_list)
-
-        response['a_list'] = a_list[::-1][0:n-1]
-
-        # 帖子推荐列表，推荐8个帖子，推荐8个要改
-        recommends = models.Topic.objects.filter(recommend=True)
-        # 推荐列表
-        r_list = []
-
-        for t in recommends:
-            dic = {'t_id': t.id, 't_title': t.t_title, 't_introduce': t.t_introduce, 't_photo': t.t_photo}
-            r_list.append(dic)
-        # 把列表装进response
-        response['r_list'] = r_list
-
-        # 把uid装进返回字典里
-        response['uid'] = request.session['uid']
-
-        # 把所有类别装入返回字典里
-        kinds = models.Kind.objects.filter()
-        response['kinds'] = kinds
-
-        return render(request, 'home.html', response)
 
 
 # 所有帖子
@@ -168,3 +133,6 @@ def all_tie(request, kid, reply_limit, time_limit):
 
         kinds = models.Kind.objects.filter()
         return render(request, 'all.html', {'topics': topics, 'kinds': kinds, 'uid': uid})
+
+def all_logged(request):
+    return render(request, 'all_logged.html')

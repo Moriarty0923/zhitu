@@ -29,8 +29,11 @@ urlpatterns = [
 
     path('admin/delete/', views.user_delete),
 
-    path('home/', views.home),
+
+    path('all/logged/', views.all_logged),
 
     url(r'^all-(?P<kid>\d+)-(?P<reply_limit>\d+)-(?P<time_limit>\d+)', views.all_tie),  # 按条件搜索帖子
+
+
 
 ]

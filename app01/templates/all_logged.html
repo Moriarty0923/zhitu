@@ -206,7 +206,7 @@
 
                     <!-- 圆点-1 (椭圆) -->
                     <div id="u13" class="ax_default _默认样式 selected" data-label="圆点-1" selectiongroup="按纽组-7">
-                        <img id="" class="img " src="/static/images/home/dot1_selected.svg"/>
+                        <img id="u13_img" class="img " src="/static/images/home/dot1_selected.svg"/>
                         <div id="u13_text" class="text " style="display:none; visibility:hidden">
                             <p></p>
                         </div>
@@ -214,7 +214,7 @@
 
                     <!-- 圆点-2 (椭圆) -->
                     <div id="u14" class="ax_default _默认样式" data-label="圆点-2" selectiongroup="按纽组-7">
-                        <img id="" class="img " src="/static/images/home/dot1.svg"/>
+                        <img id="u14_img" class="img " src="/static/images/home/dot1.svg"/>
                         <div id="u14_text" class="text " style="display:none; visibility: hidden">
                             <p></p>
                         </div>
@@ -222,7 +222,7 @@
 
                     <!-- 圆点-3 (椭圆) -->
                     <div id="u15" class="ax_default _默认样式" data-label="圆点-3" selectiongroup="按纽组-7">
-                        <img id="" class="img " src="/static/images/home/dot1.svg"/>
+                        <img id="u15_img" class="img " src="/static/images/home/dot1.svg"/>
                         <div id="u15_text" class="text " style="display:none; visibility: hidden">
                             <p></p>
                         </div>
@@ -230,7 +230,7 @@
 
                     <!-- 圆点-4 (椭圆) -->
                     <div id="u16" class="ax_default _默认样式" data-label="圆点-4" selectiongroup="按纽组-7">
-                        <img id="" class="img " src="/static/images/home/dot1.svg"/>
+                        <img id="u16_img" class="img " src="/static/images/home/dot1.svg"/>
                         <div id="u16_text" class="text " style="display:none; visibility:hidden">
                             <p></p>
                         </div>
@@ -388,34 +388,8 @@
             <!-- 用户菜单 (动态面板) -->
             <div id="u39" class="ax_default" data-label="用户菜单">
 
-                <div id="u39_state0" class="panel_state" data-label="未登录" style="">
-                    <div id="u39_state0_content" class="panel_state_content">
 
-                        <!-- Unnamed (矩形) -->
-                        <div id="u40" class="ax_default _默认样式">
-                            <div id="u40_div" class=""></div>
-                            <div id="u40_text" class="text ">
-                                <p style="font-size:18px;"><span
-                                        style="font-family:'FontAwesome', sans-serif;font-weight:400;"></span><span
-                                        style="font-family:'微软雅黑', sans-serif;font-weight:400;font-size:14px;"> </span><span
-                                        style="font-family:'微软雅黑', sans-serif;font-weight:400;">
-                                    <a href="/user/login">登录</a> </span></p>
-                            </div>
-                        </div>
-
-                        <!-- Unnamed (矩形) -->
-                        <div id="u41" class="ax_default _默认样式">
-                            <div id="u41_div" class=""></div>
-                            <div id="u41_text" class="text ">
-                                <p><span style="font-family:'FontAwesome', sans-serif;font-weight:400;"></span><span
-                                        style="font-family:'微软雅黑', sans-serif;font-weight:400;">
-                                    <a href="/user/register">注册</a> </span></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="u39_state1" class="panel_state" data-label="已登录" style="visibility: hidden;">
+                <div id="u39_state0" class="panel_state" data-label="已登录" style="visibility: visible;">
                     <div id="u39_state1_content" class="panel_state_content">
 
                         <!-- Unnamed (矩形) -->
@@ -427,9 +401,9 @@
                         </div>
 
                         <!-- 下拉菜单 (动态面板) -->
-                        <div id="u43" class="ax_default ax_default_hidden" data-label="下拉菜单"
+                        <div id="u43" class="ax_default _默认样式" data-label="下拉菜单"
                              style="display:none; visibility: hidden">
-                            <div id="u43_state0" class="panel_state" data-label="State1" style="">
+                            <div id="u43_state0" class="panel_state" data-label="State0" style="">
                                 <div id="u43_state0_content" class="panel_state_content">
 
                                     <!-- Unnamed (矩形) -->
@@ -444,12 +418,19 @@
                                     <div id="u45" class="ax_default _默认样式">
                                         <div id="u45_div" class=""></div>
                                         <div id="u45_text" class="text ">
-                                            <p><span>用户中心</span></p>
+                                            <p><span>你好!{{ username}}</span></p>
                                         </div>
                                     </div>
 
                                     <!-- Unnamed (矩形) -->
                                     <div id="u46" class="ax_default _默认样式">
+                                        <div id="u46_div" class=""></div>
+                                        <div id="u46_text" class="text ">
+                                            <p><span>用户中心</span></p>
+                                        </div>
+                                    </div>
+
+                                      <div id="u47" class="ax_default _默认样式">
                                         <div id="u46_div" class=""></div>
                                         <div id="u46_text" class="text ">
                                             <p><span>我的收藏</span></p>
