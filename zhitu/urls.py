@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from app01 import views
-
+from django.conf.urls import url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,6 +27,10 @@ urlpatterns = [
 
     path('admin/home/', views.admin_home),
 
-    path('admin/delete/', views.user_delete)
+    path('admin/delete/', views.user_delete),
+
+    path('home/', views.home),
+
+    url(r'^all-(?P<kid>\d+)-(?P<reply_limit>\d+)-(?P<time_limit>\d+)', views.all_tie),  # 按条件搜索帖子
 
 ]
